@@ -1,0 +1,56 @@
+.testimonios-section {
+    background-color: #032727;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.testimonios-title {
+    color: #d5d35f;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #0a3a3a;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 300px;
+    text-align: left;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-name {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-msg {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.testimonial-stars {
+    color: #d5d35f;
+    font-size: 1.2rem;
+}

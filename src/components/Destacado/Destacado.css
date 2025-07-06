@@ -1,0 +1,107 @@
+/* Estilos generales */
+.destacado-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #082126;
+    /* Fondo oscuro */
+    color: #d1cc74;
+    /* Texto amarillo */
+    padding: 5rem 10rem;
+    position: relative;
+}
+
+/* Contenido izquierdo */
+.left-content {
+    width: 50%;
+    max-width: 600px;
+}
+
+/* Logotipo */
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Título principal */
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Subtítulo */
+.sub-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* Descripción */
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Botón de reserva */
+.reserve-button {
+    background-color: #d1cc74;
+    color: #082126;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #b3b300;
+    /* Sombra más oscura al hover */
+}
+
+/* Contenido derecho */
+.right-content {
+    width: 50%;
+    position: relative;
+}
+
+/* Imagen de la suite room */
+.suite-image {
+    width: 100%;
+    height: auto;
+    border: 5px solid #d1cc74;
+    /* Borde amarillo */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Sombra suave */
+}
+
+/* Sello verde */
+.award-badge {
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    /* Posición fuera del contenedor */
+    transform: rotate(-45deg);
+}
+
+.badge-icon {
+    width: 150px;
+    height: auto;
+    background-color: #d1cc74;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

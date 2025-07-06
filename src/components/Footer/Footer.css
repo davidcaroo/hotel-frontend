@@ -1,0 +1,109 @@
+/* Estilos generales del footer */
+.footer-section {
+    background-color: #0A1D1A;
+    color: #d1cc74;
+    /* Texto amarillo */
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título */
+.footer-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d1cc74;
+    /* Amarillo */
+}
+
+/* Imagen central */
+.footer-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.footer-main-img {
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 15px;
+
+    margin-bottom: 3rem;
+}
+
+/* Información (Ubicación y Contacto) */
+.footer-info-row {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.footer-info-box {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 300px;
+    color: white;
+}
+
+/* Icono dentro del círculo */
+.footer-icon-circle {
+    background-color: #d1cc74;
+    /* Amarillo */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon-circle img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Texto debajo del ícono */
+.footer-text h4 {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-text p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Decoraciones adicionales */
+.footer-section::before,
+.footer-section::after {
+    content: "";
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.footer-section::before {
+    top: 5%;
+    left: 2%;
+}
+
+.footer-section::after {
+    bottom: 5%;
+    right: 2%;
+}

@@ -1,0 +1,83 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/public/assets/BlueGreen.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.banner-overlay {
+    width: 100%;
+    /* forma del overlay wave*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    background: rgba(0, 20, 10, 0.3);
+    /* Tonalidad oscura con transparencia */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.banner-content {
+    color: #F0E96E;
+    text-align: left;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn-reserva {
+    background-color: #F0E96E;
+    color: #000;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+    background-color: #e5dc5f;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /* extra protección */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Asegura que la imagen esté detrás del contenido */
+}

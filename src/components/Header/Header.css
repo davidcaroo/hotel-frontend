@@ -1,0 +1,134 @@
+.header {
+    background-color: transparent; /* 100% transparente */
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    position: fixed; /* para que esté encima del banner */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+    background-color: #022222; /* o tu color primario oscuro */
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    gap: 1.5rem;
+}
+
+.nav-box a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-box a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-box span {
+    color: #ccc;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--light-text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.login-btn:hover {
+    color: var(--secondary-color);
+}
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ccc;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.user-toggle:hover {
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #003331; /* o #092b2a */
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #01413f;
+    border-radius: 4px;
+}
+
+.user-dropdown:hover .dropdown-menu {
+    display: block;
+}
