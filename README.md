@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+```markdown
+# Sistema de Reservas de Hotel 🏨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un sistema de reservas de hotel full-stack que cuenta con un frontend moderno y responsive construido con React y un backend robusto gestionado por una API RESTful en PHP y MySQL.
+El proyecto permite a los usuarios registrarse, iniciar sesión, ver habitaciones, realizar reservas y gestionar su panel de usuario.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Características
 
-### `npm start`
+- **Autenticación de Usuarios**: Sistema completo de registro e inicio de sesión con manejo de sesiones en el backend.
+- **Catálogo de Habitaciones**: Muestra de habitaciones con descripciones detalladas, imágenes de alta calidad y precios.
+- **Sistema de Reservas**: Formulario de reserva modal e intuitivo que calcula el costo total automáticamente.
+- **Panel de Usuario**: Página de "Mis Reservas" donde los usuarios autenticados pueden ver el historial de sus estancias.
+- **Diseño Responsive**: Interfaz de usuario adaptable a dispositivos móviles, tablets y de escritorio.
+- **Notificaciones en Tiempo Real**: Alertas dinámicas para confirmar acciones o notificar errores.
+- **Experiencia de Usuario Mejorada**: Transiciones suaves y animaciones de carga para una navegación más agradable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologías Utilizadas
 
-### `npm test`
+### **Frontend**
+- [React.js](https://reactjs.org/): Para construir la interfaz de usuario interactiva.
+- [React Context API](https://reactjs.org/docs/context.html): Para la gestión del estado global de autenticación.
+- [Axios](https://axios-http.com/): Para realizar peticiones HTTP a la API del backend.
+- [Formik y Yup](https://formik.org/): Para la gestión y validación de formularios.
+- [React Toastify](https://fkhadra.github.io/react-toastify): Para notificaciones y alertas.
+- [Framer Motion](https://www.framer.com/motion/): Para animaciones y transiciones suaves.
+- **CSS Moderno**: Diseño con variables CSS y enfoque en la responsividad.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Backend**
+- **PHP**: Para la lógica de la API RESTful.
+- **MySQL**: Base de datos relacional para almacenar usuarios, habitaciones y reservas.
+- **Servidor Apache**: Servidor web para correr los scripts de PHP (gestionado con XAMPP).
+- **phpMyAdmin**: Para la administración de la base de datos.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Instalación y Configuración Local
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Prerrequisitos**
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [XAMPP](https://www.apachefriends.org/index.html)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### **1. Configuración del Backend (PHP + MySQL)**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Iniciar XAMPP**:  
+   Abre el panel de control de XAMPP y inicia los servicios de **Apache** y **MySQL**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Clonar el Backend**:  
+   Copia la carpeta `hotel-api` dentro del directorio `htdocs` de tu instalación de XAMPP.  
+   Ruta típica: `C:\xampp\htdocs\hotel-api`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Crear la Base de Datos**:  
+   - Abre tu navegador y accede a [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
+   - Crea una nueva base de datos llamada `hotel_db`.
+   - Selecciona la base de datos `hotel_db` y ve a la pestaña **SQL**.
+   - Ejecuta el contenido del archivo `database.sql` para crear tablas y datos iniciales.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Verificar la Conexión**:  
+   El archivo de configuración `hotel-api/config/database.php` ya está ajustado para conectarse con `root` y contraseña vacía (configuración por defecto de XAMPP).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **2. Configuración del Frontend (React)**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clonar el Frontend**:  
+   Abre una terminal y clona el repositorio o copia la carpeta `hotel-frontend`.
 
-### Code Splitting
+2. **Navegar al Directorio**:  
+   ```bash
+   cd hotel-frontend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Instalar Dependencias**:  
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+4. **Verificar la Conexión a la API**:  
+   El archivo `src/api.js` está configurado para conectarse a `http://localhost/hotel-api/api`.  
+   Si usaste la estructura sugerida, no necesitas cambios adicionales.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### **3. Ejecutar la Aplicación**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Asegúrate de que **Apache** y **MySQL** estén activos en XAMPP.
+2. En la terminal, ejecuta:
+   ```bash
+   npm start
+   ```
+3. La aplicación se abrirá automáticamente en [http://localhost:3000](http://localhost:3000).
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ☁️ Despliegue (Deployment)
 
-### Deployment
+### **Frontend (React)**
+1. **Generar el Build**:  
+   ```bash
+   npm run build
+   ```
+   Esto crea una carpeta `build` con archivos optimizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Elegir un Servicio**:  
+   - [Netlify](https://www.netlify.com/)
+   - [Vercel](https://vercel.com/)
+   - Arrastra la carpeta `build` a la interfaz web o conecta tu repositorio de GitHub para despliegue automático.
 
-### `npm run build` fails to minify
+3. **Variables de Entorno**:  
+   Configura la URL de tu API como variable de entorno:  
+   ```env
+   REACT_APP_API_URL=https://tu-api.com/api
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### **Backend (PHP + MySQL)**
+1. **Elegir un Hosting**:  
+   - Hosting compartido (ej: [Hostinger](https://www.hostinger.com/))
+   - VPS (ej: [DigitalOcean](https://www.digitalocean.com/))
+
+2. **Proceso de Despliegue**:  
+   - **Base de Datos**: Usa phpMyAdmin en cPanel para importar `hotel_db.sql`.
+   - **Archivos PHP**: Sube los archivos de `hotel-api` mediante FTP o el administrador de archivos del hosting.
+   - **Configurar Conexión**: Actualiza `config/database.php` con las credenciales del hosting.
+   - **Configurar CORS**:  
+     En `config/database.php`, cambia la línea:  
+     ```php
+     header("Access-Control-Allow-Origin: https://tu-frontend-desplegado.com");
+     ```
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE). Consulta el archivo `LICENSE` para más detalles.
+``` 
+
+---
+**Autor:** [David Caro](https://github.com/davidcaroo)
+@David Caro💡
